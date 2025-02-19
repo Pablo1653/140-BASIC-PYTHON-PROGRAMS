@@ -412,12 +412,175 @@ Salida: Se imprime el elemento más grande del arreglo.
 
 
 """
+# Lista de números
+numbers = [30, 10, -45, 5, 20]
+
+# Inicializar el valor mínimo con el primer elemento de la lista
+minimum = numbers[0]
+
+# Iterar a través de la lista para encontrar el número más pequeño
+for i in numbers:
+    if i < minimum:
+        minimum = i
+
+# Imprimir el número más pequeño
+print("The smallest number in the list is:", minimum)
+
+"""
+Lista de números: Se define una lista de números.
+
+Inicialización del mínimo: Se inicializa una variable minimum con el primer elemento de la lista.
+
+Iteración y comparación: Se itera a través de la lista y se compara cada elemento con minimum. Si se encuentra un número más pequeño, se actualiza minimum.
+
+Salida: Se imprime el número más pequeño de la lista.
+
+"""
+# Lista de números
+numbers = [30, 10, -45, 5, 20]
+
+# Inicializar el valor máximo con el primer elemento de la lista
+maximum = numbers[0]
+
+# Iterar a través de la lista para encontrar el número más grande
+for i in numbers:
+    if i > maximum:
+        maximum = i
+
+# Imprimir el número más grande
+print("The largest number in the list is:", maximum)
+
+"""
+
+Lista de números: Se define una lista de números.
+
+Inicialización del máximo: Se inicializa una variable maximum con el primer elemento de la lista.
+
+Iteración y comparación: Se itera a través de la lista y se compara cada elemento con maximum. Si se encuentra un número más grande, se actualiza maximum.
+
+Salida: Se imprime el número más grande de la lista.
 
 
+"""
+
+# Lista de números
+numbers = [30, 10, 45, 5, 20]
+
+# Ordenar la lista en orden descendente
+numbers.sort(reverse=True)
+
+# Verificar si hay al menos dos elementos en la lista
+if len(numbers) >= 2:
+    second_largest = numbers[1]
+    print("The second largest number in the list is:", second_largest)
+else:
+    print("The list does not contain a second largest number.")
 
 
+"""
+Lista de números: Se define una lista de números.
 
+Ordenación: Se ordena la lista en orden descendente.
 
+Verificación: Se verifica si la lista tiene al menos dos elementos.
+
+Salida: Se imprime el segundo número más grande de la lista.
+
+"""
+# Función para encontrar los N elementos más grandes de una lista
+def find_n_largest_elements(lst, n):
+    # Ordenar la lista en orden descendente
+    sorted_lst = sorted(lst, reverse=True)
+
+    # Obtener los primeros N elementos
+    largest_elements = sorted_lst[:n]
+
+    return largest_elements
+
+# Lista de números
+numbers = [30, 10, 45, 5, 20, 50, 15, 3, 345, 54, 67, 87, 98, 100, 34]
+
+# Solicitar el valor de N al usuario
+N = int(input("N = "))
+
+# Encontrar los N elementos más grandes de la lista
+result = find_n_largest_elements(numbers, N)
+
+# Imprimir los N elementos más grandes
+print(f"The {N} largest elements in the list are:", result)
+
+"""
+Función find_n_largest_elements(lst, n): Esta función encuentra los n elementos más grandes de una lista.
+
+Se ordena la lista en orden descendente.
+
+Se toman los primeros n elementos de la lista ordenada.
+
+Entrada de datos: Se solicita al usuario que ingrese el valor de N.
+
+Cálculo y salida: Se llama a la función para encontrar los N elementos más grandes y se imprimen.
+
+"""
+
+# Lista de números
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Usar una comprensión de lista para filtrar números pares
+even_numbers = [num for num in numbers if num % 2 == 0]
+
+# Imprimir los números pares
+print("Even numbers in the list:", even_numbers)
+
+"""
+Lista de números: Se define una lista de números.
+
+Comprensión de lista: Se utiliza una comprensión de lista para filtrar los números pares.
+
+Salida: Se imprimen los números pares de la lista.
+"""
+# Lista de números
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Usar una comprensión de lista para filtrar números impares
+odd_numbers = [num for num in numbers if num % 2 != 0]
+
+# Imprimir los números impares
+print("Odd numbers in the list:", odd_numbers)
+
+"""
+Lista de números: Se define una lista de números.
+
+Comprensión de lista: Se utiliza una comprensión de lista para filtrar los números impares.
+
+Salida: Se imprimen los números impares de la lista.
+"""
+# Función para encontrar palabras más largas que una longitud dada
+def find_words(words, k):
+    result = []
+    for word in words:
+        if len(word) > k:
+            result.append(word)
+    return result
+
+# Lista de palabras
+word_list = ["apple", "banana", "cherry", "date", "elderberry", "dragon fruit"]
+k = 5
+
+# Encontrar palabras más largas que k
+long_words = find_words(word_list, k)
+
+# Imprimir las palabras más largas
+print(f"Words longer than {k} characters: {long_words}")
+
+"""
+Función find_words(words, k): Esta función encuentra palabras en una lista que son más largas que una longitud dada k.
+
+Lista de palabras: Se define una lista de palabras.
+
+Entrada de datos: Se define la longitud k.
+
+Cálculo y salida: Se llama a la función para encontrar las palabras más largas que k y se imprimen.
+"""
 
 
 
